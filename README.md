@@ -4,7 +4,7 @@
 
 ### -> [**Download the full AAPL dataset on getdata.finance**](https://getdata.finance/datasets/aapl)
 
-**AAPL 5m OHLCV stocks historical data** — ultra high-quality 5m OHLCV for **Apple**. Clean `time, open, high, low, close, volume` CSV for backtesting, algorithmic trading and quantitative research.
+**AAPL 5m OHLCV stocks historical data** — ultra high-quality 5m OHLCV for **Apple**. Clean `datetime, open, high, low, close, volume` CSV for backtesting, algorithmic trading and quantitative research.
 
 ## Table of contents
 
@@ -22,7 +22,7 @@
 ## Why this dataset?
 
 - **Ultra high-quality 5m OHLCV** for **Apple** (US stocks)
-- **Clean CSV schema** — `time, open, high, low, close, volume` (no gaps in formatting)
+- **Clean CSV schema** — `datetime, open, high, low, close, volume` (no gaps in formatting)
 - **Free evaluation sample** on GitHub (`5m`) · **11 timeframes** on [getdata.finance](https://getdata.finance/datasets/aapl) · **128,318** `5m` rows in the full archive
 - Built for **backtesting**, **algorithmic trading** and **quantitative finance** workflows
 - **Weekly refresh** — [getdata.finance](https://getdata.finance) every **Saturday, 8am UTC+0**; GitHub `5m` sample updated in sync
@@ -73,7 +73,7 @@ First and latest rows from the GitHub sample **`AAPL_5m.csv`**:
 
 **First rows**
 
-| time | open | high | low | close | volume |
+| datetime | open | high | low | close | volume |
 | --- | --- | --- | --- | --- | --- |
 | 2026-02-06T20:00:00+00:00 | 276.69 | 276.86 | 276.59 | 276.81 | 1216 |
 | 2026-02-06T20:05:00+00:00 | 276.81 | 276.85 | 276.17 | 276.17 | 1320 |
@@ -83,7 +83,7 @@ First and latest rows from the GitHub sample **`AAPL_5m.csv`**:
 
 **Last rows**
 
-| time | open | high | low | close | volume |
+| datetime | open | high | low | close | volume |
 | --- | --- | --- | --- | --- | --- |
 | 2026-09-01T19:35:00+00:00 | 324.95 | 325.14 | 324.7 | 324.98 | 741 |
 | 2026-09-01T19:40:00+00:00 | 324.98 | 325.06 | 324.75 | 324.93 | 806 |
@@ -95,7 +95,7 @@ First and latest rows from the GitHub sample **`AAPL_5m.csv`**:
 
 | Column | Description |
 | --- | --- |
-| `time` | Bar open timestamp (UTC, ISO-8601). |
+| `datetime` | Bar open timestamp (UTC, ISO-8601). |
 | `open` | Opening price of the candlestick bar. |
 | `high` | Highest price during the bar. |
 | `low` | Lowest price during the bar. |
@@ -103,7 +103,7 @@ First and latest rows from the GitHub sample **`AAPL_5m.csv`**:
 | `volume` | Tick volume (number of price updates) during the bar. |
 
 ```text
-time,open,high,low,close,volume
+datetime,open,high,low,close,volume
 ```
 
 ## Code examples
@@ -113,8 +113,8 @@ time,open,high,low,close,volume
 ```python
 import pandas as pd
 
-df = pd.read_csv('AAPL_5m.csv', parse_dates=['time'])
-df.set_index('time', inplace=True)
+df = pd.read_csv('AAPL_5m.csv', parse_dates=['datetime'])
+df.set_index('datetime', inplace=True)
 print(df.describe())
 ```
 
@@ -124,8 +124,8 @@ print(df.describe())
 import backtrader as bt
 import pandas as pd
 
-df = pd.read_csv('AAPL_5m.csv', parse_dates=['time'])
-df.set_index('time', inplace=True)
+df = pd.read_csv('AAPL_5m.csv', parse_dates=['datetime'])
+df.set_index('datetime', inplace=True)
 
 class PandasData(bt.feeds.PandasData):
     params = (('datetime', None), ('open', 'open'), ('high', 'high'),
@@ -143,8 +143,8 @@ cerebro.adddata(PandasData(dataname=df))
 import pandas as pd
 import vectorbt as vbt
 
-df = pd.read_csv('AAPL_5m.csv', parse_dates=['time'])
-close = df.set_index('time')['close']
+df = pd.read_csv('AAPL_5m.csv', parse_dates=['datetime'])
+close = df.set_index('datetime')['close']
 fast, slow = vbt.MA.run(close, 10), vbt.MA.run(close, 50)
 entries = fast.ma_crossed_above(slow)
 exits = fast.ma_crossed_below(slow)
