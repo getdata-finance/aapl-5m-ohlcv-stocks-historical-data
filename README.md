@@ -1,6 +1,6 @@
 # AAPL 5m OHLCV US stocks Historical Data — Free Sample
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Dataset rows](https://img.shields.io/badge/full_dataset-243_930_rows-blue)](https://getdata.finance/datasets/aapl) [![Updated](https://img.shields.io/badge/weekly_update-every_Saturday_8am_UTC-green)](https://getdata.finance) [![Full data on getdata.finance](https://img.shields.io/badge/download-getdata.finance-orange)](https://getdata.finance/datasets/aapl)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Dataset rows](https://img.shields.io/badge/full_dataset-244_476_rows-blue)](https://getdata.finance/datasets/aapl) [![Updated](https://img.shields.io/badge/weekly_update-every_Saturday_8am_UTC-green)](https://getdata.finance) [![Full data on getdata.finance](https://img.shields.io/badge/download-getdata.finance-orange)](https://getdata.finance/datasets/aapl)
 
 ### -> [**Download the full AAPL dataset on getdata.finance**](https://getdata.finance/datasets/aapl)
 
@@ -23,11 +23,11 @@
 
 - **Ultra high-quality 5m OHLCV** for **Apple** (US stocks)
 - **Clean CSV schema** — `datetime, open, high, low, close, volume` (no gaps in formatting)
-- **Free evaluation sample** on GitHub (`5m`) · **11 timeframes** on [getdata.finance](https://getdata.finance/datasets/aapl) · **243,930** `5m` rows in the full archive
+- **Free evaluation sample** on GitHub (`5m`) · **11 timeframes** on [getdata.finance](https://getdata.finance/datasets/aapl) · **244,476** `5m` rows in the full archive
 - Built for **backtesting**, **algorithmic trading** and **quantitative finance** workflows
 - **Weekly refresh** — [getdata.finance](https://getdata.finance) every **Saturday, 8am UTC+0**; GitHub `5m` sample updated in sync
 
-> **Sample on GitHub** · `AAPL_5m.csv` (9,906 rows, `2026-03-12` -> `2026-09-11`, 923.93 KB). **Full archive on [getdata.finance](https://getdata.finance/datasets/aapl)** — **243,930** `5m` rows (full `1m`: 636,557), **11 timeframes**, `2011-05-09` -> `2026-09-11`.
+> **Sample on GitHub** · `AAPL_5m.csv` (9,906 rows, `2026-03-23` -> `2026-09-22`, 897.25 KB). **Full archive on [getdata.finance](https://getdata.finance/datasets/aapl)** — **244,476** `5m` rows (full `1m`: 636,557), **11 timeframes**, `2011-05-09` -> `2026-09-22`.
 
 ## Download sample
 
@@ -45,9 +45,9 @@ Full archive & live chart on getdata.finance: **[https://getdata.finance/dataset
 |---|--:|---|
 | Instrument | Apple · US stocks | Apple · US stocks |
 | Timeframes | `5m` (sample) | **11** — 1m · 3m · 5m · 15m · 30m · 1H · 4H · 12H · 1D · 3D · 1W |
-| 5m rows | 9,906 | **243,930** |
-| Size | 923.93 KB | full ZIP on [getdata.finance](https://getdata.finance/datasets/aapl) |
-| Period | `2026-03-12` -> `2026-09-11` | `2011-05-09` -> `2026-09-11` |
+| 5m rows | 9,906 | **244,476** |
+| Size | 897.25 KB | full ZIP on [getdata.finance](https://getdata.finance/datasets/aapl) |
+| Period | `2026-03-23` -> `2026-09-22` | `2011-05-09` -> `2026-09-22` |
 | File | `AAPL_5m.csv` | ZIP on [getdata.finance](https://getdata.finance/datasets/aapl) |
 | Coverage report | — | [AAPL coverage](https://getdata.finance/coverage/aapl) |
 | Updates | Weekly (Saturday, 8am UTC+0) — GitHub sample | Weekly (Saturday, 8am UTC+0) — all timeframes |
@@ -75,21 +75,21 @@ First and latest rows from the GitHub sample **`AAPL_5m.csv`**:
 
 | datetime | open | high | low | close | volume |
 | --- | --- | --- | --- | --- | --- |
-| 2026-03-12T13:30:00+00:00 | 260.51 | 260.51 | 257.04 | 257.76 | 1063 |
-| 2026-03-12T13:35:00+00:00 | 257.76 | 257.95 | 257.44 | 257.48 | 1087 |
-| 2026-03-12T13:40:00+00:00 | 257.48 | 257.55 | 256.4 | 256.53 | 1380 |
-| 2026-03-12T13:45:00+00:00 | 256.53 | 256.58 | 255.89 | 256.33 | 1446 |
-| 2026-03-12T13:50:00+00:00 | 256.33 | 256.61 | 255.39 | 255.46 | 1658 |
+| 2026-03-23T13:30:00+00:00 | 247.81 | 254.08 | 247.81 | 251.16 | 1189 |
+| 2026-03-23T13:35:00+00:00 | 251.16 | 253.08 | 250.99 | 252.77 | 1444 |
+| 2026-03-23T13:40:00+00:00 | 252.77 | 253.84 | 252.23 | 252.93 | 1960 |
+| 2026-03-23T13:45:00+00:00 | 252.93 | 253.16 | 251.89 | 252.47 | 1995 |
+| 2026-03-23T13:50:00+00:00 | 252.47 | 252.72 | 252.18 | 252.32 | 1960 |
 
 **Last rows**
 
 | datetime | open | high | low | close | volume |
 | --- | --- | --- | --- | --- | --- |
-| 2026-09-11T19:35:00+00:00 | 332.81 | 332.88 | 332.4 | 332.47 | 544 |
-| 2026-09-11T19:40:00+00:00 | 332.47 | 332.6 | 332.34 | 332.46 | 550 |
-| 2026-09-11T19:45:00+00:00 | 332.46 | 332.66 | 332.29 | 332.59 | 432 |
-| 2026-09-11T19:50:00+00:00 | 332.59 | 332.59 | 332.12 | 332.26 | 912 |
-| 2026-09-11T19:55:00+00:00 | 332.26 | 332.77 | 331.89 | 332.23 | 1240 |
+| 2026-09-22T19:35:00+00:00 | 340.33 | 340.45 | 340 | 340.01 | 710 |
+| 2026-09-22T19:40:00+00:00 | 340.01 | 340.12 | 339.68 | 339.75 | 620 |
+| 2026-09-22T19:45:00+00:00 | 339.75 | 339.99 | 339.56 | 339.85 | 748 |
+| 2026-09-22T19:50:00+00:00 | 339.85 | 340.01 | 339.56 | 339.81 | 834 |
+| 2026-09-22T19:55:00+00:00 | 339.81 | 339.81 | 339.15 | 339.65 | 1939 |
 
 ## Schema
 
@@ -154,7 +154,7 @@ print(pf.stats())
 
 ## Download full data
 
-The complete **AAPL** archive on **[getdata.finance](https://getdata.finance/datasets/aapl)** includes **11 OHLCV timeframes** (1m · 3m · 5m · 15m · 30m · 1H · 4H · 12H · 1D · 3D · 1W) — **243,930** rows at `5m`, plus all other timeframes in the same ZIP.
+The complete **AAPL** archive on **[getdata.finance](https://getdata.finance/datasets/aapl)** includes **11 OHLCV timeframes** (1m · 3m · 5m · 15m · 30m · 1H · 4H · 12H · 1D · 3D · 1W) — **244,476** rows at `5m`, plus all other timeframes in the same ZIP.
 
 **[-> Get the full AAPL dataset on getdata.finance](https://getdata.finance/datasets/aapl)**
 
